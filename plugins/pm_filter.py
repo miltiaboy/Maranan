@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('illa moonoose')
+            k = await query.message.edit('<b>✯ നിങ്ങൾ ചോദിച്ച മൂവി റിലീസ് ആയിട്ടുണ്ടോ..? ആയതാണ് എങ്കില്‍ ഞങ്ങള്‍ അപ്ലോഡ് ചെയ്യുന്നതായിരിക്കും💯\n\n✯ Has the movie you asked about been released? If it is, we will upload it 🥳</b>\n\n⚠︎𝙋𝙇𝙀𝘼𝙎𝙀 𝙒𝘼𝙄𝙏....🙇‍♂️')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -361,7 +361,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f_caption,
+                    caption=f'<code>{title}</code>\n\n<b>✯കൂടുതൽ മൂവീസുകൾക്കായി താഴെ കാണുന്ന ഗ്രൂപ്പിൽ ജോയിൻ  ആയി ചോദിക്കാവുന്നതാണ്✍︎\n\n         ☟︎︎︎𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ☟︎︎︎\n https://t.me/+ipuYNipHQE03NmU1 \n https://t.me/+ipuYNipHQE03NmU1 \n\n    ✰Jᴏɪɴ✪Sʜᴀʀᴇ⍟Sᴜᴘᴘᴏʀᴛ★</b>',
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('★彡Hey Bruh..彡★\n\n✯ മൂവിയുടെ ഫയൽ ‍‍ഞാന്‍ pm ഇൽ ഇട്ടിട്ടുണ്ട് പോയി നോക്ക്..🏃\n\n✯ 𝖨 𝗁𝖺𝗏𝖾 𝗉𝗎𝗍 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾 𝗈𝖿 𝗍𝗁𝖾 𝗆𝗈𝗏𝗂𝖾 𝖺𝗌 𝖺 𝗉𝗆. 𝖦𝗈 𝖠𝗇𝖽 𝖲𝖾𝖾', show_alert=True)
@@ -400,7 +400,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
-            caption=f_caption,
+            caption=f'<code>{title}</code>\n\n<b>✯കൂടുതൽ മൂവീസുകൾക്കായി താഴെ കാണുന്ന ഗ്രൂപ്പിൽ ജോയിൻ  ആയി ചോദിക്കാവുന്നതാണ്✍︎\n\n         ☟︎︎︎𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ☟︎︎︎\n https://t.me/+ipuYNipHQE03NmU1 \n https://t.me/+ipuYNipHQE03NmU1 \n\n    ✰Jᴏɪɴ✪Sʜᴀʀᴇ⍟Sᴜᴘᴘᴏʀᴛ★</b>',
             reply_markup=InlineKeyboardMarkup(buttons),
             protect_content=True if ident == 'checksubp' else False
         )
