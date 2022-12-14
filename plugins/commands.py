@@ -63,11 +63,11 @@ async def start(client, message):
             invite_link = await client.create_chat_invite_link(int(AUTH_CHANNEL))
         except ChatAdminRequired:
             logger.error("Hey Sona, Ek dfa check kr lo ki main Channel mei Add hu ya nhi...!")
-            return
+            return  
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    "📢 Join Channel 📢", url= if REQ_LINK else invite_link.invite_link
                 )
             ]
         ]
