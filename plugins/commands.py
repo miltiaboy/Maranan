@@ -42,11 +42,11 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('𝖧𝖾𝗅𝗉', callback_data='help'),
-            InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍', callback_data='about')
-        ]]
+        InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+   ],[
+        InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about'),
+        InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}')   
+    ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -89,11 +89,11 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('➕ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('𝖧𝖾𝗅𝗉', callback_data='help'),
-            InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍', callback_data='about')
-        ]] 
+        InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+   ],[
+        InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about'),
+        InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}')   
+    ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
@@ -244,7 +244,7 @@ async def start(client, message):
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
-        caption=f'<code>{title}</code>\n\n<b>✯കൂടുതൽ മൂവീസുകൾക്കായി താഴെ കാണുന്ന ഗ്രൂപ്പിൽ ജോയിൻ  ആയി ചോദിക്കാവുന്നതാണ്✍︎\n\n         ☟︎︎︎𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ☟︎︎︎\n https://t.me/+ipuYNipHQE03NmU1 \n https://t.me/+ipuYNipHQE03NmU1 \n\n    ✰Jᴏɪɴ✪Sʜᴀʀᴇ⍟Sᴜᴘᴘᴏʀᴛ★</b>',
+        caption=f'<code>{title}</code>\n\n<b>✯കൂടുതൽ മൂവീസുകൾക്കായി താഴെ കാണുന്ന ഗ്രൂപ്പിൽ ജോയിൻ  ആയി ചോദിക്കാവുന്നതാണ്✍︎\n\n         ☟︎︎︎𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ☟︎︎︎\n https://t.me/UrvashiTheaters \n https://t.me/UrvashiTheaters \n\n    ✰Jᴏɪɴ✪Sʜᴀʀᴇ⍟Sᴜᴘᴘᴏʀᴛ★</b>',
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(buttons),
         )
