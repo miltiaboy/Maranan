@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"▫[{get_size(file.file_size)}] ▸{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -83,12 +83,12 @@ async def next_page(bot, query):
             for file in files
         ]
 
-    if 0 < offset <= 10:
+    if 0 < offset <= 8:
         off_set = 0
     elif offset == 0:
         off_set = None
     else:
-        off_set = offset - 10
+        off_set = offset - 8
     if n_offset == 0:
         btn.append(
             [InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
@@ -361,7 +361,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await client.send_cached_media(
                     chat_id=query.from_user.id,
                     file_id=file_id,
-                    caption=f'<code>{title}</code>\n\n<b>✯കൂടുതൽ മൂവീസുകൾക്കായി താഴെ കാണുന്ന ഗ്രൂപ്പിൽ ജോയിൻ  ആയി ചോദിക്കാവുന്നതാണ്✍︎\n\n         ☟︎︎︎𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ☟︎︎︎\n https://t.me/+ipuYNipHQE03NmU1 \n https://t.me/+ipuYNipHQE03NmU1 \n\n    ✰Jᴏɪɴ✪Sʜᴀʀᴇ⍟Sᴜᴘᴘᴏʀᴛ★</b>',
+                    caption=f'<code>{title}</code>\n\n<b>✯കൂടുതൽ മൂവീസുകൾക്കായി താഴെ കാണുന്ന ഗ്രൂപ്പിൽ ജോയിൻ  ആയി ചോദിക്കാവുന്നതാണ്✍︎\n\n         ☟︎︎︎𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ☟︎︎︎\n https://t.me/UrvashiTheaters \n https://t.me/UrvashiTheaters \n\n    ✰Jᴏɪɴ✪Sʜᴀʀᴇ⍟Sᴜᴘᴘᴏʀᴛ★</b>',
                     protect_content=True if ident == "filep" else False 
                 )
                 await query.answer('★彡Hey Bruh..彡★\n\n✯ മൂവിയുടെ ഫയൽ ‍‍ഞാന്‍ pm ഇൽ ഇട്ടിട്ടുണ്ട് പോയി നോക്ക്..🏃\n\n✯ 𝖨 𝗁𝖺𝗏𝖾 𝗉𝗎𝗍 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾 𝗈𝖿 𝗍𝗁𝖾 𝗆𝗈𝗏𝗂𝖾 𝖺𝗌 𝖺 𝗉𝗆. 𝖦𝗈 𝖠𝗇𝖽 𝖲𝖾𝖾', show_alert=True)
@@ -394,13 +394,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
         if f_caption is None:
             f_caption = f"{title}"
         buttons = [[
-            InlineKeyboardButton('𖣘 𝗠𝗢𝗩𝗜𝗘𝗦 𝗚𝗥𝗢𝗨𝗣 𖣘', url='https://t.me/new_movies_group_2021')
+            InlineKeyboardButton('𖣘 𝗠𝗢𝗩𝗜𝗘𝗦 𝗚𝗥𝗢𝗨𝗣 𖣘', url='https://t.me/UrvashiTheaters')
          ]]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
-            caption=f'<code>{title}</code>\n\n<b>✯കൂടുതൽ മൂവീസുകൾക്കായി താഴെ കാണുന്ന ഗ്രൂപ്പിൽ ജോയിൻ  ആയി ചോദിക്കാവുന്നതാണ്✍︎\n\n         ☟︎︎︎𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ☟︎︎︎\n https://t.me/+ipuYNipHQE03NmU1 \n https://t.me/+ipuYNipHQE03NmU1 \n\n    ✰Jᴏɪɴ✪Sʜᴀʀᴇ⍟Sᴜᴘᴘᴏʀᴛ★</b>',
+            caption=f'<code>{title}</code>\n\n<b>✯കൂടുതൽ മൂവീസുകൾക്കായി താഴെ കാണുന്ന ഗ്രൂപ്പിൽ ജോയിൻ  ആയി ചോദിക്കാവുന്നതാണ്✍︎\n\n         ☟︎︎︎𝗚𝗥𝗢𝗨𝗣 𝗟𝗜𝗡𝗞 ☟︎︎︎\n https://t.me/UrvashiTheaters \n https://t.me/UrvashiTheaters \n\n    ✰Jᴏɪɴ✪Sʜᴀʀᴇ⍟Sᴜᴘᴘᴏʀᴛ★</b>',
             reply_markup=InlineKeyboardMarkup(buttons),
             protect_content=True if ident == 'checksubp' else False
         )
@@ -408,14 +408,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕↖️ Add Me To Your Groups ↗️➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-        ], [
-            InlineKeyboardButton('🧞‍♀️ Search 🧐', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🔔 Updates 🤖', url='https://t.me/new_movies_group_2021')
-        ], [
-            InlineKeyboardButton('🙆🏻 Help 🦾', callback_data='help'),
-            InlineKeyboardButton('♥️ About ♥️', callback_data='about')
-        ]]
+        InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+   ],[
+        InlineKeyboardButton('😊 ᴀʙᴏᴜᴛ', callback_data='about'),
+        InlineKeyboardButton('🌿 ɢʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}')   
+    ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
@@ -645,7 +642,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"▸[{get_size(file.file_size)}]▫{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
